@@ -1,0 +1,16 @@
+.calculator {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    div {
+        margin-bottom: 10px;
+      }
+
+      label {
+        display: inline-block;
+        width: 100px;
+      }
+  }

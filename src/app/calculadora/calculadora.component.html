@@ -1,0 +1,31 @@
+<div class="calculator">
+    <h2>Calculadora</h2>
+    
+    <div>
+      <label for="num1">Número 1:</label>
+      <input id="num1" type="number" [(ngModel)]="num1">
+    </div>
+  
+    <div *ngIf="operation !== 'sqrt'">
+      <label for="num2">Número 2:</label>
+      <input id="num2" type="number" [(ngModel)]="num2">
+    </div>
+  
+    <div>
+      <label for="operation">Operación:</label>
+      <select id="operation" [(ngModel)]="operation">
+        <option value="sum">Suma</option>
+        <option value="subtract">Resta</option>
+        <option value="multiply">Multiplicación</option>
+        <option value="divide">División</option>
+        <option value="power">Potencia</option>
+        <option value="sqrt">Raíz Cuadrada</option>
+      </select>
+    </div>
+  
+    <button (click)="calculate()">Calcular</button>
+  
+    <div *ngIf="result !== null">
+      <h3>Resultado: {{ result }}</h3>
+    </div>
+  </div>
